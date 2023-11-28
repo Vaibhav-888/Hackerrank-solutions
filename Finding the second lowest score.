@@ -1,0 +1,19 @@
+#To find the second lowest score
+if __name__ == '__main__':
+    name_arr = []
+    score_arr = []
+
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        name_arr.append([name, score])
+        score_arr.append(score)
+
+
+
+s = sorted(list(set(score_arr)))[1]    #Sorting the scores list and finding the second lowest
+
+for i, j in sorted(name_arr):          #Iterate over the whole list was appended into the name_arr list and sort it and keep tracking the second lowest score to find the name for the second lowest scorers names.
+    if j == s:
+        print(i)                       #print the name in the alphabetical order.
+        
